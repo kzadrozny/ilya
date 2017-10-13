@@ -1,19 +1,29 @@
-/*#627894 #A0AEC1 #466289 #DBE8F9 #FA6121 #FFB739*/
-
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background-color: #eee;
+    font-family: 'Raleway', sans-serif;
 }
 
 .navbar-inverse {
-	background-color: #27303b;
+	background-color: #282828;
 }
 
 .navbar-inverse .navbar-brand {
 	color: #cfd6de;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 1.3em;
+}
+
+.navbar-inverse .navbar-brand:after {
+	content:' | |';
+	padding-left: 1em;
 }
 
 .navbar-inverse .navbar-nav>li>a {
 	color: #fff;
+	font-weight: 400;
+	letter-spacing: 0.05em;
 }
 
 .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
@@ -21,8 +31,28 @@ body {
 }
 
 .page-header {
-	margin: 20px 0 10px;
-	border-bottom: 1px solid #A0AEC1;
+	padding-bottom: 0;
+	margin: 20px 0 40px;
+	text-align: center;
+	//border-bottom: 1px solid #A0AEC1;
+}
+
+.page-header:after {
+	display:block;
+	position:relative;
+	content:'';
+	bottom: -10px;
+	width: 140px;
+	height: 2px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background: #1f2640;
+	box-shadow: 0 10px 0 #1f2640;
+}
+
+a {
+	color: #4F61A0;
 }
 
 img {
@@ -31,22 +61,20 @@ img {
 
 h1 {
 	font-size: 1.6em;
-	color: #233144;
-}
-
-.inline-sub {
-	font-size: 0.7em;
-	color: #627894;
+	color: #1f2640;
+	font-family: 'Playfair Display', serif;
 }
 
 h2 {
-	color: #963a13;
+	color: #273050;
 	font-size: 1.5em;
 	margin-top: 1.5em;
 }
 
 h2:first-of-type {
 	margin-top: 0em;
+	font-size: 1.3em;
+	font-weight: 100;
 }
 
 h2.cite {
@@ -63,6 +91,8 @@ h3 {
  font-size: 1.4em;
  line-height: 1.5em;
  margin-bottom: 0.25em;
+ color: #070910;
+ font-family: 'Playfair Display', serif;
 }
 
 h2 + h3 {
@@ -71,21 +101,6 @@ h2 + h3 {
 
 .portfolio-item {
     margin-bottom: 25px;
-}
-
-ul {
-	/*list-style: none;*/
-	padding-left: 1em;
-	font-size: 1.05em;
-}
-
-#clips li {
-    margin-bottom: 0.75em;
-}
-
-li a {
-	color: #466289;
-	font-weight: 600;
 }
 
 footer {
