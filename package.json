@@ -1,0 +1,26 @@
+{
+  "name": "ilya",
+  "version": "0.0.1",
+  "description": "Ilya CUnningham Portfolio Site",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kzadrozny/ilya"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kzadrozny/ilya/issues"
+  },
+  "homepage": "https://github.com/kzadrozny/ilya#readme",
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^2.3.2",
+    "sc5-styleguide": "^1.1.3"
+  }
+}
