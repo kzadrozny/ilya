@@ -1,0 +1,293 @@
+/*
+ * Variables
+ * --------------------------------------------------
+ */
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+/*
+ * Global
+ * --------------------------------------------------
+ */
+body {
+  padding-top: 70px;
+  /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+  font-family: "Raleway", sans-serif; }
+
+a {
+  color: #4F61A0; }
+
+section {
+  margin-bottom: 2em;
+  padding-bottom: 3em; }
+  section::before, section::after {
+    position: absolute;
+    content: '';
+    pointer-events: none; }
+  section h3:before {
+    display: block;
+    content: " ";
+    margin-top: -285px;
+    height: 285px;
+    visibility: hidden;
+    pointer-events: none; }
+
+/*
+ * Fonts
+ * --------------------------------------------------
+ */
+h1 {
+  font-size: 1.6em;
+  color: #1f2640;
+  font-family: "Playfair Display", serif;
+  text-align: center; }
+
+h2 {
+  font-size: 1.6em;
+  color: #1f2640;
+  margin-top: 1.5em;
+  font-family: "Playfair Display", serif; }
+  h2:first-of-type {
+    margin-top: 0em;
+    font-weight: 100; }
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.25em;
+  color: #070910;
+  font-family: "Raleway", sans-serif; }
+  h3 + h4 {
+    margin-top: 0em; }
+
+h4 {
+  font-size: 1.5em;
+  margin-bottom: 0.25em;
+  color: #070910;
+  font-family: "Playfair Display", serif; }
+
+h5 {
+  font-size: 1.3em;
+  margin-bottom: 0.25em;
+  color: #070910;
+  font-family: "Raleway", sans-serif; }
+
+p {
+  max-width: 62em;
+  font-size: 1.2em; }
+  p.call-out {
+    font-size: 1.4em;
+    line-height: 1.8em;
+    margin: 2em 0 3em; }
+  p .firstcharacter {
+    color: #1f2640;
+    float: left;
+    font-family: Georgia;
+    font-size: 5em;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px; }
+
+/*
+ * Portfolio Section
+ * --------------------------------------------------
+ */
+section.portfolio {
+  padding-bottom: 7em; }
+
+.portfolio-item {
+  margin-bottom: 25px; }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline; }
+
+.award {
+  background: #b3b3b3;
+  padding: 8em 4em 4em;
+  margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline; }
+  @media (min-width: 48em) {
+    .award {
+      padding: 4em; } }
+  .award img {
+    margin-left: auto;
+    margin-right: auto; }
+
+#ribbon-container {
+  position: absolute;
+  top: 15px;
+  right: -15px;
+  overflow: visible;
+  /* so we can see the pseudo-elements we're going to add to the anchor */
+  font-size: 18px;
+  /* font-size and line-height must be equal so we can account for the height of the banner */
+  z-index: 1; }
+  #ribbon-container:before {
+    content: "";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    /* Create first part of drop-shadow */
+    border-top: 75px solid rgba(0, 0, 0, 0.3);
+    border-right: 29px solid rgba(0, 0, 0, 0.3);
+    border-left: 29px solid transparent; }
+  #ribbon-container:after {
+    /* Second part of dropshadow */
+    content: "";
+    height: 3px;
+    background: rgba(0, 0, 0, 0.3);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 58px;
+    right: 3px; }
+
+#ribbon-container span {
+  display: block;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 1.15em;
+  /* allows us to position our pseudo-elements properly */
+  background: #0c6674;
+  overflow: visible;
+  height: 75px;
+  margin-left: 29px;
+  color: #fff;
+  text-decoration: none; }
+  #ribbon-container span h3 {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.15em; }
+  #ribbon-container span:after {
+    /* fold in ribbon */
+    content: "";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+    border-top: 15px solid #0c6674;
+    border-right: 15px solid transparent; }
+  #ribbon-container span:before {
+    /* ribbon edge */
+    content: "";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -29px;
+    border-top: 75px solid #0c6674;
+    border-left: 29px solid transparent; }
+
+.shadow:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  box-shadow: 0 15px 10px #777;
+  right: 10px;
+  transform: rotate(3deg); }
+
+.img-shadow {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); }
+
+/*
+ * Resume Section
+ * --------------------------------------------------
+ */
+/* Rounded center split and bottom rounded */
+.roundedsplit {
+  background: #cfd6de;
+  border-radius: 0 0 80px 80px; }
+
+.roundedsplit::before,
+.roundedsplit::after {
+  top: -70px;
+  left: 0;
+  z-index: 10;
+  width: 50%;
+  height: 70px;
+  background: inherit;
+  box-shadow: 1px -10px #888888; }
+
+.roundedsplit::before {
+  border-radius: 0 80px 0 0; }
+
+.roundedsplit::after {
+  left: 50%;
+  border-radius: 80px 0 0 0; }
+
+@media (min-width: 48em) {
+  #resume .center {
+    padding-left: 3em;
+    padding-right: 3em; } }
+
+#resume p {
+  margin-bottom: 1.3em;
+  line-height: 1.5em; }
+
+#resume h5 {
+  display: inline-block;
+  margin-top: 0; }
+
+#resume span.date {
+  display: inline-block;
+  float: right;
+  padding-right: 2em; }
+
+#resume ul {
+  font-size: 1.2em;
+  line-height: 1.5em; }
+  #resume ul li {
+    margin-bottom: 1.2em; }
+    #resume ul li:last-child {
+      margin-bottom: 1.8em; }
+
+.sidebar h4 {
+  font-size: 1.15em;
+  margin-top: 0; }
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0; }
+  @media (min-width: 48em) {
+    .sidebar ul {
+      padding-right: 1.5em; } }
+  .sidebar ul li {
+    margin-bottom: 1.5em; }
+  .sidebar ul.plain li {
+    margin-bottom: 0.25em !important; }
+
+/*
+ * Footer
+ * --------------------------------------------------
+ */
+footer {
+  background-color: #27303b;
+  padding: 1.5em 1em 1em 2em;
+  margin: 50px 0 0 0; }
+
+footer small {
+  color: #cfd6de; }
+
+/*# sourceMappingURL=style.css.map */
