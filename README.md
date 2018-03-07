@@ -1,1 +1,3 @@
-# Portfolio site for Ilya Silva
+# Portfolio site for Ilya Cunningham
+
+Uses bootstrap and flexbox
