@@ -107,7 +107,7 @@ p {
  */
 
 section.portfolio {
- 	padding-bottom: 7em;
+ 	padding-bottom: 2em;
 }
 
 .portfolio-item {
@@ -323,6 +323,28 @@ section.portfolio {
 			}
 		}
 	}
+}
+
+/*
+ * Contact
+ * --------------------------------------------------
+ */
+
+ section.about {
+ 	div {
+	 	display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    @include respond-to(medium) {
+		    width: 70%;
+		}
+ 	}
+}
+
+img.profile {
+  float: left;
+  max-width: 250px;
+  margin-right: 1.5em;
 }
 
 

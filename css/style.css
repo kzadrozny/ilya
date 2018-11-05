@@ -98,7 +98,7 @@ p {
  * --------------------------------------------------
  */
 section.portfolio {
-  padding-bottom: 7em; }
+  padding-bottom: 2em; }
 
 .portfolio-item {
   margin-bottom: 25px; }
@@ -277,6 +277,23 @@ section.portfolio {
     margin-bottom: 1.5em; }
   .sidebar ul.plain li {
     margin-bottom: 0.25em !important; }
+
+/*
+ * Contact
+ * --------------------------------------------------
+ */
+section.about div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 62em) {
+    section.about div {
+      width: 70%; } }
+
+img.profile {
+  float: left;
+  max-width: 250px;
+  margin-right: 1.5em; }
 
 /*
  * Footer
